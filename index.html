@@ -517,6 +517,69 @@ body {
     transform: none !important;
   }
 }
+
+  /* КОРОНА */
+.crown-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 12px rgba(255,165,55,.65));
+  animation: crownFloat 3s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* ПОМАРАНЧЕВЕ СВІТІННЯ */
+.btn.info-btn {
+  box-shadow: 0 0 12px rgba(255,145,35,.3),
+              0 5px 20px rgba(255,120,20,.2);
+  animation: buttonGlow 3s ease-in-out infinite;
+}
+
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255,145,35,.2);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(255,145,35,.5);
+  }
+}
+
+/* ПОЯВА ЕЛЕМЕНТІВ */
+.container > * {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards;
+}
+
+.container > *:nth-child(1) { animation-delay: .1s; }
+.container > *:nth-child(2) { animation-delay: .25s; }
+.container > *:nth-child(3) { animation-delay: .4s; }
+.container > *:nth-child(4) { animation-delay: .5s; }
+.container > *:nth-child(5) { animation-delay: .6s; }
+.container > *:nth-child(6) { animation-delay: .7s; }
+.container > *:nth-child(7) { animation-delay: .8s; }
+.container > *:nth-child(8) { animation-delay: .9s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container > *, .crown-logo, .btn.info-btn {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
 </style>
 </head>
 
@@ -525,6 +588,24 @@ body {
 
   <!-- HEADER -->
   <div class="header">
+    <div class="crown-logo">
+  <svg viewBox="0 0 100 85" width="82" height="70"
+       xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="crownGold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#fff2b0"/>
+        <stop offset="45%" stop-color="#ffbd50"/>
+        <stop offset="100%" stop-color="#d66b13"/>
+      </linearGradient>
+    </defs>
+    <path d="M10 65 L4 20 L30 39 L50 5 L70 39 L96 20 L90 65 Z"
+          fill="url(#crownGold)" stroke="#ffe0a0" stroke-width="2"/>
+    <path d="M10 72 H90 L85 81 H15 Z" fill="#c96a17"/>
+    <circle cx="4" cy="17" r="5" fill="#fff1b0"/>
+    <circle cx="50" cy="5" r="5" fill="#fff1b0"/>
+    <circle cx="96" cy="17" r="5" fill="#fff1b0"/>
+  </svg>
+</div>
     <h1>Тарас Григорович Шевченко</h1>
     <p>TikTok-магазин</p>
   </div>
