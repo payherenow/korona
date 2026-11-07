@@ -248,7 +248,134 @@ body {
     transform: translateY(-1px);
   }
 }
+/* ===== KORONA AMAZONA DESIGN ===== */
 
+body {
+  background:
+    radial-gradient(ellipse at top, #49301f 0%, transparent 55%),
+    linear-gradient(145deg, #111111, #24201d, #111111) !important;
+  color: #ffffff;
+}
+
+/* Основний контейнер */
+.container {
+  max-width: 460px;
+  padding: 24px 20px;
+}
+
+/* Заголовок */
+.header {
+  margin-bottom: 28px;
+  padding-top: 15px;
+}
+
+.header h1 {
+  color: #ffab49;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  color: #c5b9ae;
+  letter-spacing: 1px;
+}
+
+/* Картки */
+.card {
+  background: linear-gradient(145deg, #292522, #1d1a18);
+  border: 1px solid #57402e;
+  border-radius: 19px;
+  padding: 19px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  margin-bottom: 17px;
+}
+
+/* Заголовки карток */
+.card-title {
+  color: #ffb45c;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+/* Кнопки реквізитів */
+.info-btn {
+  background: linear-gradient(135deg, #ffb34f, #f07819) !important;
+  color: #17120e !important;
+  border: 1px solid #ffc477 !important;
+  border-radius: 17px;
+  box-shadow: 0 5px 18px rgba(255,137,35,0.20);
+}
+
+/* Текст кнопок */
+.info-btn .btn-title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.info-btn .btn-sub {
+  color: #422713;
+  font-weight: 600;
+}
+
+/* Ефект наведення */
+@media (hover: hover) {
+  .info-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(255,137,35,0.35);
+  }
+}
+
+/* Натискання */
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Успішне копіювання */
+.btn.copied {
+  background: linear-gradient(135deg, #37c978, #159b55) !important;
+  color: white !important;
+}
+
+/* Telegram */
+.telegram-btn {
+  background: linear-gradient(135deg, #229ed9, #087bb5) !important;
+  color: white !important;
+  border-radius: 16px;
+}
+
+/* Viber */
+.viber-btn {
+  background: linear-gradient(135deg, #8170ed, #6048c9) !important;
+  color: white !important;
+  border-radius: 16px;
+}
+
+/* Нижнє повідомлення */
+.footer-note {
+  background: #29221d;
+  border: 1px solid #63432b;
+  border-left: 4px solid #ff922e;
+  border-radius: 14px;
+  color: #d2c5b9;
+}
+
+/* Плавність */
+.btn, .card {
+  transition: all 0.25s ease;
+}
+
+/* Мобільна версія */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 16px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+}
 </style>
 </head>
 
