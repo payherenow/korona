@@ -581,42 +581,36 @@ body {
   }
 }
   /* ===== FIX: ПОВЕРНЕННЯ ПЛАТІЖНИХ КНОПОК ===== */
-.container > button.btn.info-btn {
-  display: flex !important; 
-  visibility: visible !important; 
-  opacity: 1 !important;
-position: relative;
-z-index: 5;
+/* ===== ПЛАТІЖНІ КНОПКИ: АНІМАЦІЯ ТА КОПІЮВАННЯ ===== */ 
+  .container > button.btn.info-btn:not(:has(.btn-sub br)) { 
+    display: flex !important; 
+    visibility: visible !important;
+    opacity: 1; position: relative; z-index: 5;
+background: linear-gradient(135deg, #ffbd59, #f07819);
+color: #21150b;
+border: 1px solid #ffd08a;
+border-radius: 16px;
 
-background: linear-gradient(
-    135deg,
-    #ffbd59,
-    #f07819
-) !important;
+box-shadow: 0 0 12px rgba(255,145,35,.3),
+            0 5px 20px rgba(255,120,20,.2);
 
-color: #21150b !important;
-
-border: 1px solid #ffd08a !important;
-border-radius: 16px !important;
-
-box-shadow:
-    0 0 12px rgba(255,145,35,.3),
-    0 5px 20px rgba(255,120,20,.2);
-
-animation: none !important;
+animation: fadeUp 0.7s ease both !important;
   }
-.container > button.btn.info-btn .btn-title { 
-  color: #21150b !important; 
-  opacity: 1 !important;
-}
+    /* Текст кнопок */
+    .container > button.btn.info-btn .btn-title { 
+      color: #21150b !important; 
+      opacity: 1 !important; 
+    }
 .container > button.btn.info-btn .btn-sub { 
-  color: #49301c !important;
-  opacity: 1 !important; }
-/* Не приховувати вміст платіжних кнопок */ 
-  .container > button.btn.info-btn .btn-text { 
-    display: block !important; 
-    visibility: visible !important; 
-    opacity: 1 !important; 
+  color: #49301c !important; 
+  opacity: 1 !important; 
+}
+  /* Зелений колір після копіювання */ 
+  .container > button.btn.info-btn.copied { 
+    background: #2ecc71 !important; 
+    border-color: #2ecc71 !important; 
+    color: #ffffff !important; 
+    box-shadow: 0 0 15px rgba(46,204,113,.35) !important; 
   }
 </style>
 </head>
