@@ -376,6 +376,147 @@ body {
     font-size: 23px;
   }
 }
+/* ===== GOLDEN CROWN ===== */
+
+.crown-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  animation: crownFloat 3s ease-in-out infinite;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 159, 45, 0.55))
+    drop-shadow(0 5px 12px rgba(255, 120, 20, 0.3));
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* ===== ORANGE BUTTON GLOW ===== */
+
+.info-btn {
+  background: linear-gradient(
+    135deg,
+    #ffb64c,
+    #f07819
+  ) !important;
+
+  color: #21150b !important;
+  border: 1px solid #ffc477 !important;
+
+  box-shadow:
+    0 0 8px rgba(255, 145, 35, 0.25),
+    0 5px 18px rgba(255, 120, 20, 0.2);
+
+  animation: orangeGlow 3s ease-in-out infinite;
+}
+
+@keyframes orangeGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(255, 145, 35, 0.2),
+      0 5px 15px rgba(255, 120, 20, 0.15);
+  }
+
+  50% {
+    box-shadow:
+      0 0 17px rgba(255, 145, 35, 0.4),
+      0 5px 25px rgba(255, 120, 20, 0.3);
+  }
+}
+
+/* ===== CARD DESIGN ===== */
+
+.card {
+  background: linear-gradient(
+    145deg,
+    #302720,
+    #1c1917
+  ) !important;
+
+  border: 1px solid rgba(255, 155, 60, 0.25);
+  border-radius: 19px !important;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ===== HEADER ===== */
+
+.header h1 {
+  color: #ffb45c !important;
+  text-shadow: 0 2px 15px rgba(255, 145, 35, 0.2);
+}
+
+/* ===== BLOCK APPEARANCE ===== */
+
+.container > * {
+  opacity: 0;
+  animation: appearUp 0.7s ease forwards;
+}
+
+.container > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.container > *:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.container > *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.container > *:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.container > *:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.container > *:nth-child(6) {
+  animation-delay: 0.7s;
+}
+
+.container > *:nth-child(7) {
+  animation-delay: 0.8s;
+}
+
+.container > *:nth-child(8) {
+  animation-delay: 0.9s;
+}
+
+@keyframes appearUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .container > *,
+  .crown-logo,
+  .info-btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 </style>
 </head>
 
